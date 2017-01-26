@@ -17,15 +17,19 @@ function reverseString(str) {
   }
 }
 
-function randString() {
-  var word = "";
-  var alphabet = "abcdefghijklmnopqrstuvwxyz";
+function randString(wordLength) {
+  if(typeof(wordLength) != 'number'){
+    console.log(wordLength)
+    return wordLength
+  }
+  var word = ""
+  var alphabet = "abcdefghijklmnopqrstuvwxyz"
 
-  for(let i=0; i < 5; i++){
-    word += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+  for(let i=0; i < wordLength; i++){
+    word += alphabet.charAt(Math.floor(Math.random() * alphabet.length))
     console.log(word)
   }
-  return word;
+  return word
 }
 
-reverse(randString())
+reverse(randString('sodifh'))
