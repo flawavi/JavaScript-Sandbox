@@ -4,9 +4,9 @@ let love = {
   honesty: true,
   cooperation: true,
   communication: "strong",
-  fuck: (person1, person2) => `${person1} and ${person2} are making sweet, sweet love to each other. Their relationship is ${love.status}`
+  makeLove: (person1, person2) => `${person1} and ${person2} are making sweet, sweet love to each other. Their relationship is ${love.status}`
 }
-console.log(love, love.fuck("X", "Y"))
+console.log(love, love.makeLove("X", "Y"))
 
 let hate = {
   status: "toxic",
@@ -14,10 +14,10 @@ let hate = {
   honesty: false,
   cooperation: false,
   communication: "poor",
-  fuck: (person1, person2) => `${person1} hatefucks ${person2} frequently and they don't even know it but because their trust is ${hate.trust} and their communication is ${hate.communication}, they are growing apart and it's fucking ${hate.status}.`
+  makeLove: (person1, person2) => `${person1} ignores ${person2} frequently and they don't even know it but because their trust is ${hate.trust} and their communication is ${hate.communication}. They are growing apart and it's  ${hate.status}.`
 }
 
-console.log(hate, hate.fuck("X", "Y"))
+console.log(hate, hate.makeLove("X", "Y"))
 
 let cure = Object.assign({
   status: "toxic",
@@ -25,7 +25,7 @@ let cure = Object.assign({
   honesty: false,
   cooperation: false,
   communication: "poor",
-  fuck: (person1, person2) => `${person1} hatefucks ${person2} frequently and they don't even know it but because their trust is ${hate.trust} and their communication is ${hate.communication}, they are growing apart and it's fucking ${hate.status}.`
+  makeLove: (person1, person2) => `${person1} ignores ${person2} frequently and they don't even know it but because their trust is ${hate.trust} and their communication is ${hate.communication}. They are growing apart and it's ${hate.status}.`
 },love)
 
-console.log(cure, hate.fuck("X", "Y"))
+console.log(cure, hate.makeLove("X", "Y"))
