@@ -1,3 +1,4 @@
+
 // Shape - superclass
 function Shape() {
   this.x = 0;
@@ -7,7 +8,7 @@ function Shape() {
 }
 
 // superclass method
-Shape.prototype.move = (x, y) => {
+Shape.prototype.translate = (x, y) => {
   this.x += x;
   this.y += y;
   if(x === 0 && y === 0){
@@ -46,8 +47,8 @@ var creditCard = new Rectangle('credit card');
 
 console.log('Is creditCard an instance of Rectangle?', creditCard instanceof Rectangle);// true
 console.log('Is creditCard an instance of Shape?', creditCard instanceof Shape);// true
-creditCard.move(1, 2)
-creditCard.move(0, 1)
+creditCard.translate(1, 2)
+creditCard.translate(0, 1)
 creditCard.stretch(1, 1)
 creditCard.stretch(2, 1)
 creditCard.stretch(1, 2)
