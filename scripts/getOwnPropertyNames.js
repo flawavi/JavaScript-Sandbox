@@ -17,6 +17,7 @@ let obj = {
   1: 'test'
 }
 
-console.log(Object.getOwnPropertyNames(obj))
+const objPropNames = Object.getOwnPropertyNames(obj)
+console.log(objPropNames)
 /*returns an array of all the keys of the obj in a specific order:
 first numbers(numerical order), then strings, then functions*/
